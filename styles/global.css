@@ -1,0 +1,14 @@
+@font-face {
+    font-family: Pacman;
+    src: url("../Fonts/Pacman-Font/Pac-Font.ttf");
+  }
+
+@font-face {
+    font-family: Pixel;
+    src: url("../Fonts/Silkscreen/slkscr.ttf");
+  }
+
+*{
+    font-family: Pixel;
+    box-sizing: border-box;
+}

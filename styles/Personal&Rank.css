@@ -1,0 +1,89 @@
+body{
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+
+    background-color: black;
+	background-image: url('../images/sfondoAreaPersonale.jpg');
+    background-position:  right bottom;
+	background-size: 55%;
+    background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+input[value = 'MAIN MENU'], input[name = 'logOut']{
+    position: fixed;
+    font-weight: bold;
+    font-size: large;
+    color: white;
+    top: 2vh;
+}
+input[value = 'MAIN MENU']{
+	left: 2vh;
+    background-color: rgb(149, 6, 149);
+    border-color: rgb(174, 8, 174);
+    border-width: 5px;
+    
+}
+
+input[name='logOut']{
+	right: 2vh;
+	background-color: red;
+	border-color: rgb(205, 0, 0);
+    border-width: 5px;
+}
+
+h1{
+	background-color: rgba(255,255,255,0.7);
+	border-radius: 30px;
+	padding: 10px;
+    font-size:6vh;
+    font-family: Pixel;
+}
+
+table{
+    width: 60%;
+    text-align: center;
+    font-weight: bold;
+    border-collapse: collapse;
+    font-size:3vh;
+}
+
+tr:nth-child(1n+0) td{
+	color: yellow;
+}
+tr:nth-child(2n+0) td{
+	color: coral;
+}
+tr:nth-child(3n+0) td{
+	color: cyan;
+}
+tr:nth-child(4n+0) td{
+	color: orange;
+}
+tr:nth-child(4n+0) td{
+	color: pink;
+}
+td, th{
+    padding: 0.5vh;
+    border-bottom: 5px solid black;
+    font-family: Pixel;
+}
+th{
+	color: white;
+    border-bottom: 5px solid white;
+}
+td input{
+    font-weight: bold;
+    font-size: large;
+    color: white;
+    border-width: 5px;
+}
+td input[value ="BAN"]{
+    background-color: red;
+    border-color: rgb(255, 32, 32);
+}
+td input[value ="UNBAN"]{
+    background-color: green;
+    border-color: rgb(3, 197, 3);
+}

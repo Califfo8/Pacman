@@ -1,0 +1,137 @@
+
+body {
+    display: flex;
+    background-image: url("../images/SfondoGioco.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sx,#dx {
+    width:33%;
+    height: 94.5vh;
+}
+
+#GameBoard{
+    background-color: black;
+    box-shadow: 0 0 10px 4px rgb(179, 0, 255);
+    height: 94.5vh;
+    width: 73.5vh;   
+    border-collapse: collapse;
+    border-radius: 50px;
+    table-layout: fixed;
+    overflow: hidden; 
+}
+
+#GameBoard td {
+    width: 3.5vh;
+    height: 3.5vh;
+    padding: 0px;
+    margin: 0px;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+    position: relative;
+    vertical-align: top;
+}
+
+#GameBoard .muro {
+    border:solid blue 2px;
+    outline: solid blue 2px;
+    outline-offset: -8px;
+    box-shadow: 0 0 10px 2px blue;
+}
+
+#GameBoard .tunnelP {
+    outline: solid blue 2px;
+    outline-offset: -10px;
+    border:solid blue 2px;
+}
+
+
+#GameBoard img{
+    width: 3vh;
+    height:3vh;
+    display: block;
+    z-index: 1;
+    position: absolute; 
+}
+
+#dx{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
+#ScoreBoardBox {
+    height: auto;
+    width:110%;
+    padding: 2vh;
+    background-color: rgba(0, 0, 0, 0.802);
+    border: inset  rgb(179, 0, 255) 10px;
+    margin: 2vh;
+}
+#ScoreBoard {
+    display: table;
+    height: 15vh;
+    width:100%;
+}
+
+.r {
+    display: table-row;
+    text-align: center;
+    align-items: center;
+
+}
+#ScoreBoard p{
+    display: table-cell;
+    width: 50%;
+    font-size: 5vh;
+    color: white;
+}
+
+#ScoreBoardBox input[type = "submit"]{
+    display: none;
+    position:absolute;
+}
+
+button {
+    height: 6vh;
+    width:auto;
+    padding: 0.5vh;
+    font-size: 3vh;
+    color: white;
+    background-color: rgb(149, 6, 149);
+    border-width: 5px;
+    border-color: rgb(174, 8, 174);
+    text-align: center;
+}
+
+
+
+#startText, #gameOver {
+    width: 73.5vh;
+
+    background-color: transparent;
+    position: absolute;
+    
+
+    text-align: center;
+    font-weight: bolder;
+}
+
+#startText {
+    margin-top: 45vh;
+    font-size: 5vh;
+    color: yellow;
+    z-index: 3;
+}
+
+#gameOver {
+    margin-top: 35vh;
+    font-size: 12vh;
+    color: red;
+    z-index: 4;
+    visibility: hidden;
+    
+}

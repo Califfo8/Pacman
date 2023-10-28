@@ -1,0 +1,76 @@
+
+body {
+    display: flex;
+    background-color: black;
+    background-image: url("../images/SfondoMenu4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#sx, #dx {
+    width:50%;
+    height: 94.5vh;
+}
+
+button{
+    display: block;
+    background-color: transparent;
+    border: none;
+    font-size: 5vh;
+    color: white;
+    font-weight: bolder;
+    cursor:pointer;   
+}
+
+#sx button{
+    margin-left:10vh;
+    margin-bottom:3vh;
+}
+#sx button:disabled:hover{
+    color :red;
+    cursor: no-drop;
+}
+button:hover{
+    color: blueviolet;
+}
+#sx button:hover{
+    font-size: 8vh;
+}
+
+h1 {
+    color:yellow;
+    font-family: Pacman;
+    font-size: 10vh;
+    margin: 10vh;
+}
+
+#dx h2{
+    font-size: 5vh;
+    color: white;
+    font-weight: bolder;
+    margin: 0px;
+}
+#ButtMsg, #PerMsg{
+    height: 25%;
+    display: flex;
+    padding: 10vh;
+    float: right;
+    align-items: center;
+}
+#PerMsg{
+    width:85%;
+    flex-direction: column;
+    
+}
+#ButtMsg{
+    width:60%;
+}
+
+#dx button:hover{
+    font-size: 6vh;
+}
+
+#dx  button{
+    margin:0px;
+    text-decoration: underline;
+    
+}

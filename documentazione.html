@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+
+        <title>Documentazione</title>    
+        <script src="./script/redirect.js"></script>
+
+        <link rel="stylesheet" href="./styles/global.css" type="text/css">
+        <link rel="stylesheet" href="./styles/docsStyle.css" type="text/css">
+
+        <link rel='icon' type='image/png' sizes='32x32' href='/favicon/favicon-32x32.png'>
+        <link rel='icon' type='image/png' sizes='16x16' href='/favicon/favicon-16x16.png'>
+        <link rel='manifest' href='/favicon/site.webmanifest'>
+        <link rel='mask-icon' href='/favicon/safari-pinned-tab.svg' color='#5bbad5'>
+        <link rel='shortcut icon' href='/favicon/favicon.ico'>
+        <meta name='msapplication-TileColor' content='#da532c'>
+        <meta name='msapplication-config' content='/favicon/browserconfig.xml'>
+        <meta name='theme-color' content='#ffffff'>
+    </head>
+    <body >
+        <button type="button" onclick = "MainMenu()">Menu</button>
+        <div>
+        <h1>Funzionalita' Generali del Sito</h1>
+        <ol>
+            <li><h3>Creazione Account e Login</h3>
+                <p>Per giocare e' neccesssario avere un account; la creazione di quest'ultimo si basa sull'inserimento di nome utente e password.<br> In caso un utente
+                    sia gia' registrato l'operazione viene bloccata. Al login viene verificata sia l'effettiva registrazione che la correttezza della password.<br>
+                    Il login e' bloccato nei seguenti casi:
+                    <ul>
+                        <li>La password e' scorretta </li>
+                        <li>L'utente non e' registrato </li>
+                        <li>L'account e' stato sospeso dall'admin </li>
+                    </ul>
+                 </p>
+            </li>
+            <li><h3>Area Personale</h3>
+                <p>Effettuato il login e' possibile accedere alla propria area personale, dove e' presente lo storico dei punteggi delle partite 
+                    e la possibilita' di eseguire il "Log out" dal proprio account</p>
+            </li>
+            <li><h3>Account Admin</h3>
+                <p>Attraverso l'account admin e' possibile bandire gli account degli altri utenti, per far questo l'area personale dell'admin presenta
+                    un apposita tabella di gestione invece dello storico delle partite. Quando un utente viene bandito non potra' piu' eseguire il login al suo prossimo tentativo.
+                </p>
+            </li>
+            <li><h3>Classifica Generale</h3>
+                <p>Anche senza eseguire l'accesso e' possibile vedere la classifica generale, contentente i soli migliori punteggi di tutti i giocatori.
+                </p>
+            </li>
+            <li><h3>Musica ed Effetti sonori</h3>
+                <p>Attraverso le opzioni, accessibili sia dalla pagina principale che da quella di gioco, e' possibile regolare il volume della musica e degli effetti speciali.
+                    I valori impostati vengono salvati fra una pagina e l'altra. 
+                </p>
+            </li>
+        </ol>
+
+        <h1>Funzionalita' del Gioco</h1>
+        <p>
+            L'implementazione di tutte le funzionalita' sono fedeli al gioco originale.          
+        </p>
+        <ol>
+            <li><h3>Movimento di Pacman</h3>
+                <p>
+                    Sono supportati i seguenti comandi:
+                    <ul>
+                        <li>Freccia destra per andare a destra </li>
+                        <li>Freccia sinistra per andare a sinitra </li>
+                        <li>Freccia in giu' per andare verso il basso </li>
+                        <li>Freccia in su per andare verso l'alto </li>
+                        <li>Barra spaziatrice per far partire il gioco. Funziona solo quando viene segnalato a schermo </li>
+                    </ul>
+                </p>
+            </li>
+            <li><h3>Intelligenza Artificiale Fantasmi</h3>
+                <p>
+                    Ogni fantasma presenta la propria intelligenza artificiale come era stato progettato nel gioco originale; ne segue, che ogni
+                    fantasma presenta comportamenti diversi.
+                </p>
+            </li>
+            <li><h3>Alternanza delle fasi dei fantasmi</h3>
+                <p>
+                    I fantasmi non seguono pedissiquamente l'AI a loro implementata, bensi' alternano fasi di caccia (dove seguono la loro
+                    "personalita", ovvero la propria AI) a fasi di ritirata (dove si allontanano da Pacman), ognuna delle fasi ha una durata specifica. Questo schema si ripete al primo livello per 4 volte,
+                    dopo di che i fantasmi permangono nella fase di caccia. La durata e il numero delle fasi diminuisce con l'aumento della 
+                    difficolta'.
+                </p>
+            </li>
+            <li><h3>Power Pill</h3>
+                <p>
+                    La power Pill e' la sferetta piu' grande presente nel campo da gioco. Ce ne sono 4 in tutto il livello. Una volta che viene presa 
+                    Pacman acquista l'abilita' di mangiare i fantasmi ottenendo cosi' dei punti bonus; l'effetto della Power pill e' segnalato dal cambio di colore in blu
+                    dei fantasmi, e avvisa il giocatore della scadenza dell'effetto attraverso l'alternanza della colorazione dei fantasmi tra bianco e blu.
+                </p>
+            </li>
+            <li><h3>Morte dei fantasmi</h3>
+                <p>
+                    Quando un fantasma viene mangiato ritorna alla casa, permettendo al giocatore di vedere il percorso intrapreso, invece di teletrasportarsici. Una volta
+                    raggiunta la casa, i fantasmi permangono nella stessa per un breve periodo di tempo, prima di ritonare a cacciare Pacman.
+                </p>
+            </li>
+            <li><h3>Punteggio</h3>
+                <p>
+                    Il punteggio e' dato dalla somma degli elementi mangiati da Pacman; di seguito i valori associati ad ogni elemento:
+                    <ul>
+                        <li>Palline: 10 punti </li>
+                        <li>Power Pills: 50 punti  </li>
+                        <li>Fantasmi (mangiati tramite la Power Pill): il punteggio e' assegnato in modo incrementale: per ogni periodo di Power Pill si ottengono rispettivamente
+                            200, 400, 800 e 1600 punti per il primo, secondo, terzo e quarto fantasma ingerito. L'ordine dei fantasmi non conta.  </li>
+                    </ul>
+                </p>
+            </li>
+            <li><h3>Avanzare di Livello e Vite</h3>
+                <p>
+                    Una volta che Pacman ha ingerito tutte le palline presenti, si passa al livello successivo. Il punteggio e le vite vengono conservati
+                    tra un livello e l'altro. Si parte con 3 vite ma e' possibile ottenere una vita extra ogni 10000 punti.
+                </p>
+            </li>
+            <li><h3>Incremento della difficolta'</h3>
+                <p>
+                    All'avanzare dei livelli viene aumentata la difficolta' del gioco velocizzando i movimenti dei personaggi, riducendo l'alternanza
+                    delle fasi dei nemici (si prediligie la fase di caccia, a quella di ritirata) e diminuendo il tempo della Power pill.
+                </p>
+            </li>
+            <li><h3>Musica ed Effetti</h3>
+                <p>
+                 La musica parte all'accesso dell'area di gioco, gli effetti invece partono all'avvio del gioco.
+                </p>
+            </li>
+            <li><h3>Condizioni di sconfitta</h3>
+                <p>
+                 Al termine delle vite il gioco termina e viene mostrata la scritta "Game Over", dopo 2 secondi si viene reindirizzati alla classifica.
+                </p>
+            </li>
+        </ol>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,83 @@
+*{
+    font-size: 3vh;
+    color:white;
+    font-weight: bold;
+}
+body {
+    background-color: black;
+    background-image: url("../images/SfondoLogin.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    background-color: black;
+    padding: 2vh;
+}
+
+#sx {
+    width: 33%;
+    height: 10vh;
+    display: block;
+}
+
+#ce {
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+#FormBox{
+    width: fit-content;
+    padding:5vh;
+    margin:auto;
+}
+
+input[type ="text"],input[type = password]{
+    height: 30px;
+	width: 300px;
+    border-width: 5px;
+    border-color: lightcyan;
+    color:black;
+    cursor: auto;
+}
+
+form div {
+    width: fit-content;
+    padding: 2vh;
+    margin: auto;
+
+}
+
+input[type="submit"]{
+    border-width: 5px;
+    background-color: green;
+    border-color: rgb(3, 146, 3);
+    cursor:pointer;
+}
+
+button {
+    background-color: rgb(149, 6, 149);
+    border-width: 5px;
+    border-color: rgb(174, 8, 174);
+    cursor:pointer;
+}
+
+#Dx {
+    height: 10vh;
+    display: block;
+}
+#Dx div{
+    width:fit-content;
+    margin: auto;
+    padding: 1vh;
+}
+
+#DxInf {
+    position: absolute;
+    top:40vh;
+
+}
+
+#DxInf h3 {
+    color:red;
+}
