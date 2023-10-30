@@ -1,5 +1,5 @@
 {
-    "name": "Pacman",
+    "name": "pacman",
     "description": "Pacman game",
     "require": {
         "php": ">=7.4",
