@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Installa PHP
+      run: sudo apt-get install php
     - name: Check out code
       uses: actions/checkout@v2
 
