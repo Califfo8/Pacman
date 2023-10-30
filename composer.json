@@ -1,0 +1,15 @@
+{
+    "name": "Pacman",
+    "description": "Pacman game",
+    "require": {
+        "php": ">=7.4",
+        "monolog/monolog": "^2.0",
+        "somevendor/somepackage": "^1.0"
+        // Aggiungi qui le tue dipendenze
+    },
+    "autoload": {
+        "psr-4": {
+            "NomeTuoSpazioNomi\\": "src/"
+        }
+    }
+}
