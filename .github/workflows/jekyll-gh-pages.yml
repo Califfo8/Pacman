@@ -39,7 +39,8 @@ jobs:
         run: composer install
 
       - name: Build site
-        run: php index.php
+        run: index.html
+        # run: php index.php
         
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
